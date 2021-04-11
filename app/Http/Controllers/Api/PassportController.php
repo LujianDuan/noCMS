@@ -16,7 +16,7 @@ use Illuminate\Support\Facades\Auth;
 class PassportController extends Controller
 {
 
-    const AUTHON_TOKEN_KEY = '81business:token:client_id_';
+    const AUTHON_TOKEN_KEY = 'nocms:token:client_id_';
 
     protected $server;
     protected $tokens;
