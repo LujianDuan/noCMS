@@ -62,5 +62,8 @@ class Kernel extends HttpKernel
         'signed' => \Illuminate\Routing\Middleware\ValidateSignature::class,
         'throttle' => \Illuminate\Routing\Middleware\ThrottleRequests::class,
         'verified' => \Illuminate\Auth\Middleware\EnsureEmailIsVerified::class,
+        'role' => \Trebol\Entrust\Middleware\EntrustRole::class,
+        'permission' => \Trebol\Entrust\Middleware\EntrustPermission::class,
+        'ability' => \Trebol\Entrust\Middleware\EntrustAbility::class,
     ];
 }

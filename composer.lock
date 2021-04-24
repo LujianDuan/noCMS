@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "cb31c405530a4e3658fe3a274a346f68",
+    "content-hash": "0b248ac430ce2f5c2cf34101a2fb854b",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -5628,6 +5628,71 @@
                 "source": "https://github.com/tijsverkoyen/CssToInlineStyles/tree/2.2.3"
             },
             "time": "2020-07-13T06:12:54+00:00"
+        },
+        {
+            "name": "trebol/entrust",
+            "version": "2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/jromero98/entrust.git",
+                "reference": "aafa98dbf6aa32f1db45cb478416a4332806ce95"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/jromero98/entrust/zipball/aafa98dbf6aa32f1db45cb478416a4332806ce95",
+                "reference": "aafa98dbf6aa32f1db45cb478416a4332806ce95",
+                "shasum": "",
+                "mirrors": [
+                    {
+                        "url": "https://mirrors.aliyun.com/composer/dists/%package%/%reference%.%type%",
+                        "preferred": true
+                    }
+                ]
+            },
+            "require": {
+                "illuminate/cache": "^8.0",
+                "illuminate/console": "^8.0",
+                "php": ">=7.3"
+            },
+            "require-dev": {
+                "illuminate/database": "^8.0",
+                "mockery/mockery": "dev-master",
+                "phpunit/phpunit": "^8.5"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Trebol\\Entrust\\EntrustServiceProvider"
+                    ],
+                    "aliases": {
+                        "Entrust": "Trebol\\Entrust\\EntrustFacade"
+                    }
+                }
+            },
+            "autoload": {
+                "classmap": [
+                    "src/commands"
+                ],
+                "psr-4": {
+                    "Trebol\\Entrust\\": "src/Entrust/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jorge Romero",
+                    "email": "jromero@trebolcolombia.com"
+                }
+            ],
+            "description": "This package provides a flexible way to add role-based permissions to Laravel and is a fork from Zizaco/entrust",
+            "support": {
+                "source": "https://github.com/jromero98/entrust/tree/2.0"
+            },
+            "time": "2020-10-05T15:29:47+00:00"
         },
         {
             "name": "vlucas/phpdotenv",

@@ -1,8 +1,8 @@
 <?php
 namespace App\Search;
-use App\Models\Admin;
+use App\Models\Permission;
 
-class AdminSearch{
+class PermissionSearch{
     use Property;
 
 
@@ -35,7 +35,7 @@ class AdminSearch{
     }
 
     public function setOrder_by($val){
-        $allowed = ['created_at','total_score'];
+        $allowed = ['created_at','id'];
         if(!in_array($val,$allowed)){
             throw new \Exception('not allowed order by field',101); 
         }
@@ -61,7 +61,7 @@ class AdminSearch{
     }
 
     public function search($params){
-        $this->_query = new Admin(); 
+        $this->_query = new Permission(); 
         foreach($params as $k=>$v){
             $this->$k = $v; 
         }
@@ -76,7 +76,7 @@ class AdminSearch{
     }
 
     public function one($params){
-        $this->_query = new Admin(); 
+        $this->_query = new Permission(); 
         foreach($params as $k=>$v){
             $this->$k = $v; 
         }
@@ -97,6 +97,10 @@ class AdminSearch{
         return $this->_page; 
     }
 
+    public function getPage_size(){
+        return $this->_page_size; 
+    }
+
     public function getList(){
         return $this->_list; 
     }
@@ -105,6 +109,7 @@ class AdminSearch{
         return [
             'page'=>$this->page, 
             'pages'=>$this->pages, 
+            'page_size'=>$this->page_size, 
             'total'=>$this->total, 
             'list'=>$this->list, 
         ]; 
